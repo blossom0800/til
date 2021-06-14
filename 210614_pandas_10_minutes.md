@@ -24,8 +24,28 @@
     2021-06-18	-0.162143	-0.844427	-0.700371	-0.802430
     2021-06-19	1.017551	-1.158533	-0.506960	0.671127
     
+# Dict 형태의 데이터를 series 형태의 DataFrame으로 바꾸기
+ - df2 = pd.DataFrame(
+    {
+        "A": 1.0,
+        "B": pd.Timestamp("20210614"),
+        "C": pd.Series(1 , index=list(range(4)), dtype="float64"),
+        "D": np.array([3] *4 , dtype="int64"),
+        "E": pd.Categorical(["test", "train", "test", "train"]),
+        "F": "foo"    
+    })
 
-
+   df2
+ - 결과: (표 형태로)
+   
+    A	B	C	D	E	F
+    0	1.0	2021-06-14	1.0	3	test	foo
+    1	1.0	2021-06-14	1.0	3	train	foo
+    2	1.0	2021-06-14	1.0	3	test	foo
+    3	1.0	2021-06-14	1.0	3	train	foo
+ - 실험: index=list(range(4))를 다른 숫자로 넣으면> 오류 발생, np.array([3]*4)의 4를 다른 숫자로 넣으면> 오류 발생
+ - 
+ - arrays must all be same length
 
 
 
