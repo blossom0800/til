@@ -44,8 +44,53 @@
     2	1.0	2021-06-14	1.0	3	test	foo
     3	1.0	2021-06-14	1.0	3	train	foo
  - 실험: index=list(range(4))를 다른 숫자로 넣으면> 오류 발생, np.array([3]*4)의 4를 다른 숫자로 넣으면> 오류 발생
- - 
- - arrays must all be same length
+ - Error Message: arrays must all be same length
+
+# df2의 속성
+ - df2.dtypes
+ - 결과:
+   A           float64
+   B    datetime64[ns]
+   C           float64
+   D             int64
+   E          category
+   F            object
+   dtype: object
+
+# 몇 개의 row만 보기 (참고_sql에서는 rownum = )
+ - df.head()
+ - df.head(3)
+ - df.tail()
+
+# Row, Column을 보고 싶을 때
+ - df.index -> 
+   DatetimeIndex(['2021-06-14', '2021-06-15', '2021-06-16', '2021-06-17',
+               '2021-06-18', '2021-06-19'],
+              dtype='datetime64[ns]', freq='D')
+ - df.columns
+   Index(['A', 'B', 'C', 'D'], dtype='object')
+
+# DataFrame.to.numpy()
+# Numpy와 Pandas의 큰 차이 중 하나는 Numpy의 array들이 하나의 dtype인 반면에 DataFrame은 컬럼별 dtype이 할당됨. 즉, DataFrame의 컬럼별로 datatype이 다르다면 DataFrame.to.numpy()를 작동하는 것 자체가 무리일 수 있음
+
+# df.to_numpy() -- 알맹이만 가져오기
+   array([[-0.94504813,  1.21872839, -1.37734185,  1.49069973],
+          [-0.20502659, -1.64968697,  0.3311827 ,  0.61397901],
+          [ 0.8838092 ,  0.29304478,  1.13368697,  0.19933452],
+          [-0.17699415, -0.16746902,  0.46269549, -0.88627787],
+          [ 0.89789977,  0.35553974, -0.30020716,  0.0191062 ],
+          [ 0.01482595, -2.54674603,  0.88696685,  0.43498049]])
+
+# df2.to_numpy() -- 알맹이만 가져오기
+   array([[1.0, Timestamp('2021-06-14 00:00:00'), 1.0, 3, 'test', 'foo'],
+          [1.0, Timestamp('2021-06-14 00:00:00'), 1.0, 3, 'train', 'foo'],
+          [1.0, Timestamp('2021-06-14 00:00:00'), 1.0, 3, 'test', 'foo'],
+          [1.0, Timestamp('2021-06-14 00:00:00'), 1.0, 3, 'train', 'foo']],
+         dtype=object)
+
+
+
+
 
 
 
