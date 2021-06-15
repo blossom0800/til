@@ -1,7 +1,7 @@
 (Source: https://seaborn.pydata.org/tutorial/function_overview.html)
 # Seaborn에는 크게 세 가지의 함수가 있음
 
-# replot (relationl, 관계형)
+# replot (relational, 관계형)
 - scatterplot
 - lineplot
 
