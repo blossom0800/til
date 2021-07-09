@@ -1,15 +1,17 @@
 (Source: https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html)
 
 # 새로운 Series를 만들 때
- - s = pd.Series([1, 3, 5, np.nan, 6, 8])
+ - `s = pd.Series([1, 3, 5, np.nan, 6, 8])`
  - Series는 반드시 맨 앞이 대문자여야 함. series~로 입력하면 에러 발생
 
 # date
  - dates = pd.date_range("20210614", periods = 6)
  - 결과 : 
+   ```
    DatetimeIndex(['2021-06-14', '2021-06-15', '2021-06-16', '2021-06-17',
                '2021-06-18', '2021-06-19'],
               dtype='datetime64[ns]', freq='D')
+   ```
 
 # Creating a DataFrame by passing a NumPy array, with a datetime index and labeled columns;
  - `df = pd.DataFrame(np.random.randn(6, 4), index=dates, columns=list("ABCD"))`
@@ -37,11 +39,11 @@
         "E": pd.Categorical(["test", "train", "test", "train"]),
         "F": "foo"    
     })
-    ```
-
    df2
- - 결과: (표 형태로)
+   ```
    
+ - 결과: (표 형태로)
+   ```
     A	B	C	D	E	F
     0	1.0	2021-06-14	1.0	3	test	foo
     1	1.0	2021-06-14	1.0	3	train	foo
@@ -49,10 +51,12 @@
     3	1.0	2021-06-14	1.0	3	train	foo
  - 실험: index=list(range(4))를 다른 숫자로 넣으면> 오류 발생, np.array([3]*4)의 4를 다른 숫자로 넣으면> 오류 발생
  - Error Message: arrays must all be same length
+   ```
 
 # df2의 속성
- - df2.dtypes
+ - `df2.dtypes`
  - 결과:
+   ```
    A           float64
    B    datetime64[ns]
    C           float64
@@ -60,11 +64,12 @@
    E          category
    F            object
    dtype: object
+   ```
 
 # 몇 개의 row만 보기 (참고_sql에서는 rownum = )
- - df.head()
- - df.head(3)
- - df.tail()
+ - `df.head()`
+ - `df.head(3)`
+ - `df.tail()`
 
 # Row, Column을 보고 싶을 때
  - df.index -> 
