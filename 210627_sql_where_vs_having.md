@@ -4,7 +4,8 @@
 e.g.)
 
 
-`SELECT TO_CHAR(a.order_date, 'YYYY-Q') quarter
+```
+SELECT TO_CHAR(a.order_date, 'YYYY-Q') quarter
 
         ,d.brand_name
         
@@ -18,4 +19,5 @@ e.g.)
 
  GROUP BY TO_CHAR(a.order_date, 'YYYY-Q')
  
- HAVING SUM(b.quantity * b.list_price) >= 10000;`
+ HAVING SUM(b.quantity * b.list_price) >= 10000;
+ ```
