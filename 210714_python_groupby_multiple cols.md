@@ -2,7 +2,7 @@
 `order_df.groupby('city').agg({'order_id' : ['count'], 'lat' : ['mean'], 'lng' : ['mean']})`
 
 
-# Output
+# Output (Dataframe)
 ```
                      order_id	lat	lng
                      count	mean	mean
