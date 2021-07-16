@@ -5,7 +5,7 @@
  - Series는 반드시 맨 앞이 대문자여야 함. series~로 입력하면 에러 발생
 
 # date
- - dates = pd.date_range("20210614", periods = 6)
+ - dates = `pd.date_range("20210614", periods = 6)`
  - 결과 : 
    ```
    DatetimeIndex(['2021-06-14', '2021-06-15', '2021-06-16', '2021-06-17',
