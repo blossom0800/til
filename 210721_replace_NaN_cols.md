@@ -26,6 +26,7 @@ df_price
 df_price[3].fillna(df_price[1], inplace = True)
 df_price
 ```
+*Note - df_price[3].fillna(df_price[1], inplace = True)을 df_price[3]에 담으면 다시 NaN이 되었음
 
 # Output
 ```
