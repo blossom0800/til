@@ -1,6 +1,6 @@
 (Source: https://datatofish.com/sum-columns-rows-dataframe/)
 
-# df.sum(axis = 0)
+# df.sum(axis = 0) : sum_column
 ```
 import pandas as pd
 
@@ -15,7 +15,7 @@ sum_column = df.sum(axis=0)
 print (sum_column)
 ```
 
-# df.sum(axis = 1)
+# df.sum(axis = 1) : sum_row
 ```
 import pandas as pd
 
