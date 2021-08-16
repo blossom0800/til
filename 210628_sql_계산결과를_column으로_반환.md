@@ -1,5 +1,6 @@
 # Inline 쿼리로 From 절 이하에 해당 조건을 만족하는 테이블 생성 후(이 경우엔 쿼터 별 대륙 별 확진자), 본 SELECT 문에서 연산함수+CASE WHEN을 같이 써줌
-`SELECT CONTINENT,
+```
+SELECT CONTINENT,
         SUM(CASE WHEN QUARTER = '1' THEN CASES ELSE 0 END) Q1,
         SUM(CASE WHEN QUARTER = '2' THEN CASES ELSE 0 END) Q2,
         SUM(CASE WHEN QUARTER = '3' THEN CASES ELSE 0 END) Q3,
@@ -13,3 +14,4 @@ FROM (SELECT TO_CHAR(dates, 'q') quarter,
       AND continent IS NOT NULL
       GROUP BY TO_CHAR(dates, 'q'), continent)
 GROUP BY CONTINENT;
+```
