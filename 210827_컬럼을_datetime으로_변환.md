@@ -1,1 +1,1 @@
-`pd.to_datetime(df_head['event_time'])`
+`pd.to_datetime(df['컬럼명'])`
