@@ -6,3 +6,6 @@
  - 해결 : `df_res['DateTime'] = pd.to_datetime(df_res['DateTime'], utc=True)`
 
 (Source: https://stackoverflow.com/questions/55385497/how-can-i-convert-my-datetime-column-in-pandas-all-to-the-same-timezone)
+
+for more details
+ - https://www.delftstack.com/ko/howto/python-pandas/how-to-convert-dataframe-column-to-datetime-in-pandas/
